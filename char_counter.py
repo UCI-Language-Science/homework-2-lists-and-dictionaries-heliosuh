@@ -26,8 +26,18 @@
 
 def char_counter():
     # YOUR CODE GOES HERE
-    # You can delete the line below when you start adding code
-    pass
+    user_input = input ("please enter a string: ")
+    char_counts = {}
+
+    for char in user_input:
+        if char in char_counts:
+            char_counts[char]+= 1
+        else:
+            char_counts[char] = 1
+    for char, count in char_counts.items():
+        print(f"'{char}': {count}")
+
+
 
 if __name__ == "__main__":
     char_counter()
